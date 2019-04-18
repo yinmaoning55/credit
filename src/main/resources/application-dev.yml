@@ -1,0 +1,38 @@
+server:
+  port: 9091
+  servlet:
+    context-path: /
+    session:
+    # timeout second
+      timeout:
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/edu_credit?useUnicode=true&characterEncoding=utf-8&userSSL=false&serverTimezone=GMT%2b8
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  jpa:
+    show-sql: true
+  mail:
+    host: smtp.qq.com
+    username: 1084196026@qq.com
+    password: hqnfpbfoeshlgdhf
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 25000
+  session:
+    store-type: redis
+  redis:
+    host: 192.168.247.137
+    port: 6379
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  cache:
+    type: none

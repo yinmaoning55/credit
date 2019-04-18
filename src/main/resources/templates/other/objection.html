@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>信用异议</title>
+</head>
+<body>
+<form th:object="${obj}" action="/objection/add" method="post">
+    <div>
+    <input type="text" th:field ="*{entprisename}"/>
+    <input type="text" th:field = "*{content}">
+    </div>
+    <button type="submit">提交</button>
+</form>
+
+</body>
+</html>

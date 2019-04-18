@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>填写企业信息</title>
+</head>
+<body>
+<form th:object="${enterprise}" action="/user/auth2" method="post">
+    <table>
+        <tr>
+            <td>统一信用代码：</td>
+            <td>
+                <input id="creditnum" type="text" th:field="*{creditnum}" />
+            </td>
+        </tr>
+        <tr>
+            <td>企业工商名称：</td>
+            <td >
+                <input id="entname" type="text" th:field="*{entname}" />
+            </td>
+        </tr>
+    </table>
+    <button type="submit" id="entbutton">提交认证</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<header>
+<div class="navbox clearfix">
+    <div class="nav">
+        <a href="/" class="container"><img th:src="@{/img/logo.png}"></a>
+        <div th:if="${not #lists.isEmpty(username)}"  style="float: right; margin:48px  0px;">
+            <a href="/logout" class="dropnout">[退出]</a>
+            <a href="/user/index" class="usercenter" th:text="${username}">个人中心 </a>
+        </div>
+        <div th:if="${ #lists.isEmpty(username)}"  style="float: right; margin:48px  0px;">
+            <a href="/register" class="rega">注册 </a>
+            <a href="/login" class="logina">登录&nbsp;|&nbsp; </a>
+        </div>
+        <ul class="navul">
+            <li><a href="/">首页</a></li>
+            <li><a href="javascript:void(0)">征信服务</a>
+                <ul class="xyptul">
+                    <li><a href="/info/entindex">信用查询</a></li>
+                    <li><a href="creditReport.html">信用报告</a></li>
+                    <li><a href="creditFile.html">信用档案</a></li>
+                </ul></li>
+            <li><a href="noviceGuidelines.html">新手指引</a></li>
+            <li><a href="creditObjection.html">信用异议</a></li>
+            <li><a href="about.html">关于我们</a>
+                <ul class="xyptul">
+                    <li><a href="about.html">公司介绍</a></li>
+                    <li><a href="legalNotices.html">法律声明</a></li>
+                    <li><a href="talentsWanted.html">诚聘英才</a></li>
+                </ul></li>
+        </ul>
+    </div>
+    <!--<input name="${(_csrf.parameterName)!}" value="${(_csrf.token)!}" type="hidden">-->
+</div>
+</header>
+</html>

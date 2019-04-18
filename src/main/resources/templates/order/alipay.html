@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>支付宝支付前页</title>
+    <script type="text/javascript" th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</head>
+<body>
+    <div id="paydiv"> </div>
+    <script type="text/javascript" th:inline="javascript">
+        var a = [[${paybody}]];
+        $("#paydiv").prepend(a);
+    </script>
+</body>
+
+</html>

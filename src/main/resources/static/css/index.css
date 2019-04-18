@@ -1,0 +1,373 @@
+.first a{
+    color:red;
+}
+.seaquery{
+    width:100%;
+    height: 388px;
+    background: #f2f6ff;
+}
+.seaquery .seatitle{
+    font-size:30px;
+    color:#333;
+    padding-top:120px;
+}
+/*why*/
+.whybox {
+    width: 100%;
+    height: 558px;
+    background: #f2f6ff;
+    overflow: hidden;
+}
+
+.whybox .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    margin-top: 100px;
+}
+
+.why {
+    width: 940px;
+    height: 215px;
+    margin: 0 auto;
+    margin-top:70px;
+}
+
+.why div {
+    width: 25%;
+    height: 215px;
+    float: left;
+}
+
+.why div img {
+    display: block;
+    margin: 0 auto;
+}
+
+.why div p {
+    padding-top: 38px;
+    text-align: center;
+    color: #333333;
+    font-size: 20px;
+}
+
+/*server*/
+
+.serverbigbox {
+    width: 100%;
+    height: 714px;
+    overflow: hidden;
+    background: url('../img/sprite20 w1666 h288.png') no-repeat center 90px;
+}
+.serverbox {
+    width: 1200px;
+    height: 411px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+}
+.server {
+    width: 350px;
+    height: 411px;
+    float: left;
+    box-shadow: 0 2px 16px #eaeaea;
+
+}
+.serverbigbox .title, .pingtaibigbox .title, .newsbigbox .title, .hezuobigbox .title {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 30px;
+    color: #333;
+    margin-top: 70px;
+}
+
+.titleEn {
+    text-align: center;
+    font-family: Arial;
+    color: #999;
+    margin-top: 18px;
+}
+
+.serverbox .server:first-child {
+    background: #fff url('../img/creditQuery.png') no-repeat top center;
+}
+
+.serverbox .server:nth-child(2) {
+    background: #fff url('../img/report.png') no-repeat top center;
+}
+
+.serverbox .server:last-child {
+    background: #fff url('../img/file.png') no-repeat top center;
+}
+
+
+
+.server + .server {
+    margin-left: 75px;
+}
+
+.ser {
+    width: 285px;
+    height: 411px;
+    margin: 0 auto;
+}
+
+.serimg {
+    margin: 0 auto;
+    text-align: center;
+    color: #333;
+    font-size: 20px;
+    margin-top: 152px;
+}
+
+.serp {
+    padding: 37px 0;
+    height: 88px;
+    text-align: center;
+    font-size: 16px;
+    color: #868686;
+    line-height: 24px;
+}
+.ser a:last-child{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    color: #999999;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 24px;
+    border: 1px solid #ccc;
+}
+a.sera:hover {
+    background: #457aee;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*pingtai*/
+.pingtaibigbox {
+    width: 100%;
+    height: 600px;
+    background: url(../img/pingtailinebg.png) center 100px no-repeat;
+    overflow: hidden;
+}
+
+.pingtaibox {
+    width: 1117px;
+    height: 331px;
+    margin: 0 auto;
+    margin-top: 46px;
+}
+
+.ptbox {
+    width: 447px;
+    height: 297px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 16px;
+    box-shadow: 0 2px 16px #88a3fd;
+}
+
+.ptbox p {
+    color: #999;
+    line-height: 22px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.pttitle {
+    width: 447px;
+    height: 57px;
+    line-height: 37px;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.ptimg {
+    width: 98px;
+    height: 98px;
+    border-radius: 50%;
+    -ms-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    display: block;
+    background:url('../img/sprite8 w98 h196.png') no-repeat;
+    margin: 20px auto 20px;
+}
+.ptbox .img1{
+    background-position:0 -98px;
+}
+.ptbox .img2{
+    background-position:0 0;
+}
+/*news*/
+.newsbigbox {
+    width: 100%;
+    height: 533px;
+    overflow: hidden;
+}
+
+.newsbox {
+    width: 1200px;
+    height: 229px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.newbox {
+    width: 384px;
+    height: 229px;
+    float: left;
+}
+
+.ml38 {
+    margin-left: 23px;
+}
+
+.newline {
+    border-right: 1px solid #cccccc;
+}
+
+.newtitlebox {
+    width: 384px;
+    height: 36px;
+    padding-top: 11px;
+}
+
+.newtitle {
+    width: 104px;
+    height: 20px;
+    padding-left:12px;
+    line-height: 20px;
+    border-left:4px solid #457aee;
+    float: left;
+    color: #333;
+    font-size: 16px;
+}
+
+.newmore {
+    float: right;
+    font-size: 14px;
+    line-height: 20px;
+    margin-right: 22px;
+    color: #205ad9;
+}
+
+.newul {
+    padding-top: 33px;
+    width: 384px;
+    color:#888;
+}
+
+.newul li {
+    width: 384px;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 22px;
+    background: url(../img/newicon.jpg) no-repeat;
+}
+
+.newa {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 270px;
+    font-size: 14px;
+    color: #333;
+    float: left;
+    margin-left: 17px;
+}
+
+.newtime {
+    font-size: 14px;
+    color: #888888;
+    float: right;
+    margin-right: 22px;
+}
+
+/*hezuo*/
+.hezuobigbox {
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+    background: #f2f6ff;
+}
+
+.hezuobox {
+    width: 1002px;
+    height: 356px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.hezuologo {
+    width: 214px;
+    height: 115px;
+    border: 8px solid #fff;
+    margin: 0 27px 29px 0;
+    float: left;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.p1 {
+    background: #fff url(../img/p1.png) center no-repeat;
+    background-size: 100%;
+}
+
+.p2 {
+    background: #fff url(../img/p2.png) center no-repeat;
+    background-size: 100%;
+}
+
+.p3 {
+    background: #fff url(../img/p3.png) center no-repeat;
+    background-size: 100%;
+}
+
+.p4 {
+    background: #fff url(../img/p4.png) center no-repeat;
+    background-size: 100%;
+}
+
+.p5 {
+    background: #fff url(../img/p5.png) center no-repeat;
+    background-size: 100%;
+}
+
+.p6 {
+    background: #fff url(../img/p6.png) center no-repeat;
+    background-size: 100%;
+}
+
+.p7 {
+    background: #fff url(../img/p7.png) center no-repeat;
+    background-size: 100%;
+}
+
+.p8 {
+    background: #fff url(../img/p8.png) center no-repeat;
+    background-size: 100%;
+}
+.p9 {
+    background: #fff url(../img/p9.png) center no-repeat;
+    background-size: 100%;
+}
+.p10 {
+    background: #fff url(../img/p10.png) center no-repeat;
+    background-size: 100%;
+}
+.p11 {
+    background: #fff url(../img/p11.png) center no-repeat;
+    background-size: 100%;
+}

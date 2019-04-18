@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>企业信息</title>
+</head>
+<body>
+<header th:replace="common/header :: header"></header>
+<div style="text-align: center; margin:150px 300px">
+    <div>
+            <ul>
+                <li th:text="${ent.creditnum}"></li>
+                <li th:text="${ent.entname}"></li>
+                <li th:text="${ent.entstatus}"></li>
+                <li th:text="${ent.registertime}"></li>
+            </ul>
+    </div>
+</div>
+</body>
+</html>

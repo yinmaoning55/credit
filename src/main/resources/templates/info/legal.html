@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>填报企业法定代表人</title>
+</head>
+<body>
+<form th:object="${legal}" action="/info/entlegal" method="post">
+    <input type="hidden" th:field="*{entId}" />
+    <table>
+        <tr>
+            <td>地址：</td>
+            <td>
+                <input  type="text" th:field="*{address}" />
+            </td>
+        </tr>
+        <tr>
+            <td>姓名：</td>
+            <td >
+                <input type="text" th:field="*{name}" />
+            </td>
+        </tr>
+
+    </table>
+    <button type="submit" id="entbutton">提交认证</button>
+</form>
+</body>
+</html>

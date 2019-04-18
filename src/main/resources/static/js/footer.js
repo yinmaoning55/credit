@@ -1,0 +1,13 @@
+document.writeln("	<div class=\'footertop\'>");
+document.writeln("		<div class=\'footerbox\'>");
+document.writeln("			<ul>");
+document.writeln("				<li><a href=\'creditQuery.html\'>信用查询&nbsp;|&nbsp;</a><a");
+document.writeln("					href=\'creditReport.html\'>信用报告&nbsp;|&nbsp;</a><a");
+document.writeln("					href=\'talentsWanted.html\'>诚聘英才&nbsp;|&nbsp;</a><a href=\'about.html\'>关于我们</a>");
+document.writeln("				</li>");
+document.writeln("				<li><span>全国联系热线：400-870-2288</span><span>公司地址：天津市西青区宾水西道108号今日大厦A座1008室</span></li>");
+document.writeln("				<li>Copyright 天软征信有限公司 京ICP备14007188号</li>");
+document.writeln("				<li>京公网安备 22010802014602号</li>");
+document.writeln("			</ul>");
+document.writeln("		</div>");
+document.writeln("	</div>");

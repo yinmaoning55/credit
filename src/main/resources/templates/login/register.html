@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册账号</title>
+    <link rel="stylesheet" th:href="@{/bootstrap-3.3.7-dist/css/bootstrap.css}"/>
+    <link rel="stylesheet" th:href="@{/bootstrap-3.3.7-dist/css/bootstrap-theme.css}"/>
+    <link rel="stylesheet" th:href="@{/bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.ttf}"/>
+</head>
+<body>
+<div style="margin:40px auto; width:60%;">
+<form action="/login/register" role="form" id="registerForm" method="post">
+    <!--每一行-->
+    <div class="form-group has-success has-feedback">
+        <div>
+            <label for="Email" class="control-label" >邮箱</label>
+        </div>
+        <div>
+            <input type="email"  class="form-control"  aria-describedby="basic-addon1" id="email" name="email" value="" placeholder="请输入邮箱地址" required/>
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <div>
+            <label for="mobile" class="control-label">手机号码</label>
+        </div>
+        <div>
+            <input type="tel" id="mobile" name="mobile" value="" class="form-control" aria-describedby="basic-addon1" placeholder="请输入手机号码" required
+                   pattern="^(0|86|17951)?(13[0-9]|15[012356789]|17[0678]|18[0-9]|14[57])[0-9]{8}"/>
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <div>
+            <label for="username" class="control-label">登录名称</label>
+        </div>
+        <div>
+            <input placeholder="请输入登录用户名" class="form-control" aria-describedby="basic-addon1" type="text" data-val="true"
+                   pattern="([a-zA-Z0-9_]{4,20})" required id="username" name="username" value=""/>
+            <span>登录用户名长度4-20个字符，包含字母、数字、下划线</span>
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <div>
+            <label for="name" class="control-label">名称</label>
+        </div>
+        <div>
+            <input placeholder="请输入全称" class="form-control" aria-describedby="basic-addon1" type="text" pattern="(?!.*[@:：\s]).*[^._])"
+                   id="name" name="name" required value=""/>
+            <span>显示名称长度2-20，不可包含@,空格，结尾不能是下划线_</span>
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <div>
+            <label for="alias" class="control-label">显示名称</label>
+        </div>
+        <div>
+            <input placeholder="简称或昵称" class="form-control" aria-describedby="basic-addon1" type="text" pattern="(?!.*[@:：\s]).*[^._])"
+                   id="alias" name="alias" required value=""/>
+            <span>显示名称长度2-10，不可包含@,空格，结尾不能是下划线_</span>
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <div>
+            <label for="password" class="control-label">密码</label>
+        </div>
+        <div>
+            <!-- 复杂密码 pattern="(.*(?=.{8,30})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*)" -->
+            <input placeholder="请输入密码" class="form-control" aria-describedby="basic-addon1" type="password" required
+                   pattern="(.*(?=.{6,30})(?=.*\d).*)"
+                   id="password" name="password" onchange="checkPasswords()"/>
+            <span>长度要求8-30位，密码必须包含大小字母、数字和特殊字符的组合</span>
+        </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+        <div>
+            <label for="password2" class="control-label">确认密码</label>
+        </div>
+        <div>
+            <input placeholder="请输入确认密码" class="form-control" aria-describedby="basic-addon1" type="password" data-val="true" id="password2" name="password2"
+                   onchange="checkPasswords()"/>
+            <span class="glyphicon form-control-feedback"></span>
+        </div>
+    </div>
+
+    <div class="form-group has-success has-feedback"></div>
+    <!--注册按钮-->
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <span class="col-sm-12 ajax-error"></span>
+            <button id="submitBtn" type="submit" class="btn btn-primary btn-lg"
+                    data-style="zoom-in" href="/"><span class="ladda-label">注册</span></button>
+        </div>
+    </div>
+</form>
+</div>
+</body>
+<script type="application/javascript">
+
+    function checkPasswords() {
+        var pass1
+            = document.getElementById("password");
+        var pass2
+            = document.getElementById("password2");
+
+        if (pass1.value != pass2.value) {
+            pass1.setCustomValidity("两次输入的密码不匹配");
+        } else {
+            pass1.setCustomValidity("");
+        }
+    }
+</script>
+<script th:src="@{/bootstrap-3.3.7-dist/js/bootstrap.js}"></script>
+
+</html>

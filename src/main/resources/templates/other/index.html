@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="shortcut icon" th:href="@{/img/favicon.ico}"/>
+    <link rel="stylesheet" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" th:href="@{/css/banner.css}"/>
+    <link rel="stylesheet" th:href="@{/css/index.css}"/>
+
+</head>
+<body>
+<!--top-->
+<header th:replace="common/header :: header"></header>
+<!--banner-->
+<div class="wrap">
+    <div class="inner">
+        <img th:src="@{/img/see-ya-there.png}" alt=""  >
+    </div>
+</div>
+<!--sea-->
+<div class="seaquery">
+    <div class="seabigbox">
+        <div class="sea">
+            <h2 class="seatitle">企业信用信息查询</h2>
+        </div>
+    </div>
+
+    <div class="seabigbox">
+        <div class="sea">
+            <div class="seabox">
+                <input type="text" name="" id="company" value="" class="seatxt"
+                       placeholder="请输入企业名、法人、注册号等关键字" style="border: none;" onkeydown="search()"/>
+                <a href="javascript:void(0)" onclick="ShowCompany()">
+                    <div class="seabtn">搜索</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--server-->
+<div class="serverbigbox">
+    <div class="title">征信服务</div>
+    <div class=" titleEn">CREDIT SERVICE</div>
+    <div class="serverbox clearfix">
+        <div class="server">
+            <div class="ser">
+                <div class="serimg">企业信用信息查询</div>
+                <p class="serp">高效快捷地提供一站式信用信息查询服务</p>
+                <a href="creditQuery.html" class="sera">了解详情</a>
+            </div>
+        </div>
+        <div class="server">
+            <div class="ser">
+                <div class="serimg">企业信用报告</div>
+                <p class="serp">全面记录企业各类经济活动，反映企业信用状况</p>
+                <a href="creditReport.html" class="sera">了解详情</a>
+            </div>
+        </div>
+        <div class="server">
+            <div class="ser">
+                <div class="serimg">企业信用档案</div>
+                <p class="serp">信用档案是企业根据自身的信用评级获得商业信任的绿色通行证</p>
+                <a href="creditFile.html" class="sera">了解详情</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--why-->
+<div class="whybox">
+    <div class="title">为什么选择我们</div>
+    <div class=" titleEn">CHOICE</div>
+    <div class="why clearfix">
+        <div>
+            <img th:src="@{/img/why1.png}"/>
+            <p>优质数据</p>
+        </div>
+        <div>
+            <img th:src="@{/img/why2.png}"/>
+            <p>安全规范</p>
+        </div>
+        <div>
+            <img th:src="@{/img/why3.png}"/>
+            <p>稳定高效</p>
+        </div>
+        <div>
+            <img th:src="@{/img/why4.png}"/>
+            <p>实时快捷</p>
+        </div>
+    </div>
+</div>
+<!--pingtai-->
+<div class="pingtaibigbox">
+    <div class="title">解决方案</div>
+    <div class=" titleEn">SOLUTION</div>
+    <div class="pingtaibox">
+        <div class="ptbox r">
+            <div class="ptimg img1"></div>
+            <h2 class="pttitle">政府</h2>
+            <p>提供完善、严密的技术支持，应各类政务需求，搭建优质平台</p>
+        </div>
+        <div class="ptbox l">
+            <div class="ptimg img2"></div>
+            <h2 class="pttitle">企业</h2>
+            <p>提供企业全面、准确的综合信用信息，为各类信用交易提供重要的决策参考</p>
+        </div>
+    </div>
+</div>
+<!--news-->
+<div class="newsbigbox">
+    <div class="title">新闻中心</div>
+    <div class=" titleEn">NEWS CENTER</div>
+    <div class="newsbox clearfix">
+        <div class="newbox newline">
+            <div class="newtitlebox">
+                <div class="newtitle"><a href="newsList.html?type=ngsdt">公司动态</a></div>
+                <a href="newsList.html?type=ngsdt" class="newmore">更多</a>
+            </div>
+            <ul class="newul" id="gsdt">
+            </ul>
+        </div>
+        <div class="newbox newline ml38">
+            <div class="newtitlebox">
+                <div class="newtitle"><a href="newsList.html?type=nhyxw">行业新闻</a></div>
+                <a href="newsList.html?type=nhyxw" class="newmore">更多</a>
+            </div>
+            <ul class="newul" id="hyxw"></ul>
+        </div>
+        <div class="newbox ml38">
+            <div class="newtitlebox">
+                <div class="newtitle"><a href="newsList.html?type=nzcfg">政策法规</a></div>
+                <a href="newsList.html?type=nzcfg" class="newmore">更多</a>
+            </div>
+            <ul class="newul" id="zcfg"></ul>
+        </div>
+    </div>
+</div>
+<!--hezuo-->
+<div class="hezuobigbox clearfix">
+    <div class="title">合作机构</div>
+    <div class=" titleEn">COOPERATIVE AGENCY</div>
+    <div class="hezuobox clearfix">
+        <div class="hezuologo p2"></div>
+        <div class="hezuologo p2"></div>
+        <div class="hezuologo p2"></div>
+        <div class="hezuologo p2" style="margin-right: 0;"></div>
+        <div class="hezuologo p2"></div>
+        <div class="hezuologo p2"></div>
+        <div class="hezuologo p2"></div>
+        <div class="hezuologo p2" style="margin-right: 0"></div>
+    </div>
+
+</div>
+
+<!--footer-->
+<script th:src="@{/js/footer.js}"></script>
+</body>
+<script  th:src="@{/js/jquery-3.3.1.min.js}" type="text/javascript" charset="utf-8"></script>
+</html>

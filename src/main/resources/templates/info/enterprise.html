@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>补充企业信息</title>
+</head>
+<body>
+<form th:object="${oriEnt}" action="/info/suppEnter" method="post">
+    <input type="hidden" th:field="*{entid}" />
+    <table>
+        <tr>
+            <td>注册金额：</td>
+            <td>
+                <input  type="text" th:field="*{registermoney}" />
+            </td>
+        </tr>
+        <tr>
+            <td>注册地址：</td>
+            <td >
+                <input type="text" th:field="*{registeraddr}" />
+            </td>
+        </tr>
+
+    </table>
+    <button type="submit" id="entbutton">提交认证</button>
+</form>
+</body>
+</html>
